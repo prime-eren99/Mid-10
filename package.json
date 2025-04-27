@@ -7,10 +7,13 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "axios": "^0.21.1",    // Used to make HTTP requests to the Hugging Face API
-    "express": "^4.17.1",  // Web framework for handling requests
-    "dotenv": "^10.0.0"    // To manage environment variables (optional for security)
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "dotenv": "^10.0.0"
   },
   "author": "Eren",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "14.x"
+  }
 }
