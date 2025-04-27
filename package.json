@@ -1,15 +1,16 @@
 {
-  "name": "midjourney-style-api",
+  "name": "image-gen-api",
   "version": "1.0.0",
-  "description": "MidJourney style AI Image Generator API",
+  "description": "API for generating images from text prompts using Hugging Face",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "axios": "^1.6.5",
-    "express": "^4.18.2"
+    "axios": "^0.21.1",    // Used to make HTTP requests to the Hugging Face API
+    "express": "^4.17.1",  // Web framework for handling requests
+    "dotenv": "^10.0.0"    // To manage environment variables (optional for security)
   },
   "author": "Eren",
-  "license": "ISC"
+  "license": "MIT"
 }
