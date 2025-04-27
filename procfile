@@ -1,0 +1,4 @@
+# Procfile for MidJourney Style Image Generator API
+# Author: Eren
+
+web: node server.js
