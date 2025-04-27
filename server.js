@@ -1,3 +1,4 @@
+require('dotenv').config(); // Load environment variables from .env file
 const express = require('express');
 const axios = require('axios'); // Used for making requests to the Hugging Face API
 const app = express();
@@ -16,13 +17,11 @@ app.post('/generate', async (req, res) => {
 
   try {
     // Sending the prompt to Hugging Face's model for image generation
-    const response = await axios.post('https://api-inference.huggingface.co/models/YOUR_MODEL_NAME', 
-    {
+    const response = await axios.post('https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2', {
       inputs: prompt
-    },
-    {
+    }, {
       headers: {
-        'Authorization': `Bearer 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`, // Use your API token here
+        'Authorization': `Bearer ${process.env.HF_API_TOKEN}`, // Use your API token here from the .env file
       }
     });
 
